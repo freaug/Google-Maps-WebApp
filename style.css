@@ -1,0 +1,27 @@
+body{
+	background: grey;
+}
+
+.map{
+	margin: auto;
+	width: 80%;
+	padding: 20px;
+}
+
+#buttonGroup{
+	padding-top: 20px;
+}
+
+#googleMap{
+	width:100%;
+	height: 580px;
+}
+
+@media only screen and (max-width: 900px) {
+    .map{
+    	margin: auto;
+    	width: 100%;
+    	padding: 0px;
+    	padding-top: 20px;
+    }
+}
