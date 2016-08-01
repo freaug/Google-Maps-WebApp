@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8"></meta>  
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="kml.js"></script>
+  </head>
+  <body onload="initMap()">
+    <div id="map"></div>
+    <div id="floating-panel">
+        <input type="checkbox" id="layer0" onclick="toggleLayer(0)">Shuttle Route<br>
+        <input type="checkbox" id="layer1" onclick="toggleLayer(1)">Parade Route
+    </div>
+  </body>
+</html>
