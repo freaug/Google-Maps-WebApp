@@ -1,27 +1,82 @@
-html{ height: 100%; }
+html{ height: 100%; background-color: black;}
 body{ height: 100%; margin: 0; padding: 0; }
 
 #map { height: 100%; }
 
-#title{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #fff;
-  border: 1px solid #999;
-  padding: 1px;
-  font-family: 'Arial', 'sans-serif';
-  font-size: 2em;
-}
-
 #floating-panel {
   position: absolute;
-  top: 50px;
-  right: 10px;
+  top: 28px;
+  right: 8px;
+  z-index: 1;
+  font-size: 30px; 
+  cursor:pointer;
+  color: lightblue;
   background-color: #fff;
-  border: 1px solid #999;
-  padding: 1px;
-  font-family: 'Arial', 'sans-serif';
+  text-align: center;
+  line-height: 30px;
+  padding: 10px;
+  border-radius: 50%;
 }
 
+.shadow{
+  -moz-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    padding-left: 2em;
+    text-align: left;
+    font-family: Roboto;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 26px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    cursor: pointer;
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 28px;
+    right: 8px;
+    line-height: 30px;
+    padding: 10;
+    font-size: 60px !important;
+}
+/* media queries, need to add more media queries*/
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 16px; padding: 4px;}
+  .closebtn {
+    font-size: 40px !important;
+    top: 15px;
+  }
+  #floating-panel{
+    top: 15px;
+  }
+}
 

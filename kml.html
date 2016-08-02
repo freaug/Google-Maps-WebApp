@@ -7,20 +7,25 @@
     <script type="text/javascript" src="kml.js"></script>
   </head>
   <body onload="initMap()">
-    <div id="map"></div>
-    <div id="title">Inman Park Festival</div>
-    <div id="floating-panel">
-        <input type="checkbox" id="layer0" onclick="toggleLayer(0)" checked>Shuttle Route<br>
-        <input type="checkbox" id="layer0" onclick="toggleLayer(0)">Shuttle Route<br>
-        <input type="checkbox" id="layer1" onclick="toggleLayer(1)">Parade Route<br>
-        <input type="checkbox" id="layer2" onclick="toggleLayer(2)">Art Vendors<br>
-        <input type="checkbox" id="layer3" onclick="toggleLayer(3)">Bathrooms<br>
-        <input type="checkbox" id="layer4" onclick="toggleLayer(4)">Food/Beer<br>
-        <input type="checkbox" id="layer5" onclick="toggleLayer(5)">Services<br>
-        <input type="checkbox" id="layer6" onclick="toggleLayer(6)">Stages<br>
-        <input type="checkbox" id="layer7" onclick="toggleLayer(7)">Street Vendors<br> 
-        <input type="checkbox" id="layer8" onclick="toggleLayer(8)">Tour of Homes<br> 
-         <input type="checkbox" id="layer8" onclick="toggleLayer(8)">Tour of Homes<br> 
+    <!-- overlay nav, default hidden -->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+        <div class="overlay-content">
+            <a id="layer0" onclick="toggleLayer(0)">Shuttle Route</a><br>
+            <a id="layer1" onclick="toggleLayer(1)">Parade Route</a><br>
+            <a id="layer2" onclick="toggleLayer(2)">Art Vendors</a><br>
+            <a id="layer3" onclick="toggleLayer(3)">Bathrooms</a><br>
+            <a id="layer4" onclick="toggleLayer(4)">Food/Beer</a><br>
+            <a id="layer5" onclick="toggleLayer(5)">Services</a><br>
+            <a id="layer6" onclick="toggleLayer(6)">Stages</a><br>
+            <a id="layer7" onclick="toggleLayer(7)">Street Vendors</a><br> 
+            <a id="layer8" onclick="toggleLayer(8)">Tour of Homes</a><br> 
+            <a id="layer8" onclick="toggleLayer(8)">Tour of Homes</a><br> 
+        </div>
     </div>
+    <!-- map -->
+    <div id="map"></div>
+    <!-- menu -->
+    <div id="floating-panel" class="shadow"><span onclick="openNav()">☰</span></div>
   </body>
 </html>
