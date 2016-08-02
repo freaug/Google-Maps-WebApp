@@ -1,5 +1,6 @@
 var map;
 var layers = [];
+var layerId = ['layer0', 'layer1', 'layer2', 'layer3', 'layer4', 'layer5', 'layer6', 'layer7', 'layer8'];
 
 function initMap() {
 	var myLatLng = new google.maps.LatLng(33.760654,-84.355205);
@@ -31,18 +32,23 @@ function initMap() {
 function toggleLayer(i) {
 	if(layers[i].getMap() === null){
 		layers[i].setMap(map);
+		document.getElementById(layerId[i]).className = "glyphicon glyphicon-check";
 	}
 	else{
 		layers[i].setMap(null);
+		document.getElementById(layerId[i]).className = "glyphicon glyphicon-unchecked";
+
 	}
 }
 //open overlay nav
 function openNav(){
-	document.getElementById('myNav').style.width = "50%";
+	document.getElementById('myNav').style.width = "30%";
+	document.getElementById('myNav').style.opacity = "1.0";
 }
 // //close overlay nav
 function closeNav(){
 	document.getElementById('myNav').style.width = "0%";
+	document.getElementById('myNav').style.opacity = "0.0";
 }
 
 
