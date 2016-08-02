@@ -20,10 +20,14 @@ function initMap() {
 	layers [6] = new google.maps.KmlLayer('https://sites.google.com/site/eddieskmlfiles/kml-files/Stages.kmz?attredirects=0&d=1',{preserveViewport: true, suppressInfoWindows: false});
 	layers [7] = new google.maps.KmlLayer('https://sites.google.com/site/eddieskmlfiles/kml-files/Street%20Market%20Booth%20Numbers.kmz?attredirects=0&d=1',{preserveViewport: true, suppressInfoWindows: false});
 	layers [8] = new google.maps.KmlLayer('https://sites.google.com/site/eddieskmlfiles/kml-files/Tour%20of%20Homes.kmz?attredirects=0&d=1',{preserveViewport: true, suppressInfoWindows: false});
+<<<<<<< HEAD
 	//initialize the map to the festival area
 	layers[0].setMap(map);
 	//set other layers to null
 	for(var i = 1; i < layers.length; i++){
+=======
+	for(var i = 0; i < layers.length; i++){
+>>>>>>> 5168ab3d35fdc6325d6b5e71a179c717e653d2af
 		layers[i].setMap(null);
 	}
 }
