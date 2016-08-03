@@ -46,7 +46,8 @@ function toggleLayer(i) {
 			layers[i].setMap(map);
 			document.getElementById(layerId[i]).className = "glyphicon glyphicon-check";
 		}
-	document.getElementById(layerId[i]).className = "glyphicon glyphicon-check";
+	document.getElementById(layerId[9]).className = "glyphicon glyphicon-check";
+	document.getElementById(layerId[10]).className = "glyphicon glyphicon-unchecked";
 	}else if(layerId[i]==='layer10'){
 		for(var i=0;i<layers.length;i++){
 			layers[i].setMap(null);
@@ -76,7 +77,7 @@ function closeNav(){
 //changes the menu overlays size based on the window size, could try to do this with css
 window.addEventListener('resize', menuSize);
 function menuSize(){
-	if($(window).width()<=600){
+	if($(window).width()<=620){
 		document.getElementById('myNav').style.width = "50%";
 	}else if($(window).width()<=900){
 		document.getElementById('myNav').style.width = "40%";		
