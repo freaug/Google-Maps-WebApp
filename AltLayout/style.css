@@ -1,0 +1,102 @@
+html{ height: 100%; background-color: black;}
+body{ height: 100%; margin: 0; padding: 0; font-family:  'Lato', sans-serif}
+
+.shadow{
+  -moz-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+}
+
+.gradient{
+    background: rgb(30,30,30); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgba(30,30,30, 0.9) , rgba(30,30,30, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, left, rgba(30,30,30, 0.9) , rgba(30,30,30, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, left, rgba(30,30,30, 0.9) , rgba(30,30,30, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, left, rgba(30,30,30, 0.9) , rgba(30,30,30, 0)); /* Standard syntax (must be last) */
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+/*  background-color: rgb(30,30,30);
+    background-color: rgba(30,30,30, 0.9);*/
+    overflow-x: hidden;
+    opacity: 0.0;
+    transition: 0.5s; 
+}
+
+.overlay-content {
+    position: fixed;
+    top: 15%;
+    width: 100%;
+    padding-left: 2em;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 26px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:active{
+    cursor: pointer;
+    color: lightblue;
+}
+
+.closebtn {
+    position: absolute;
+    top: 16px;
+    right: 0px;
+    font-size: 50px !important;
+}
+
+.floating-panel {
+  position: absolute;
+  top: 24px;
+  right: 8px;
+  z-index: 1;
+  font-size: 50px !important; 
+  cursor:pointer;
+  color: lightblue;
+}
+
+#map { height: 100%; }
+
+@media screen and (min-width: 901px){
+  .overlay{
+    width: 30%;
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 620px){
+  .overlay{
+    width: 40%;
+  }
+}
+@media screen and (min-width: 619px){
+  .overlay{
+    width: 50%;
+  }
+}
+/* media queries, need to add more media queries*/
+@media screen and (max-height: 600px) {
+  .overlay a 
+  {font-size: 24px; 
+    padding: 4px;
+  }
+  .closebtn {
+    top: 7px;
+    right: 4px;
+}
+  #floating-panel{
+    top: 15px;
+  }
+}
