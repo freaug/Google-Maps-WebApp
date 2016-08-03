@@ -1,9 +1,10 @@
 var map;
 var layers = [];
 var layerId = ['layer0', 'layer1', 'layer2', 'layer3', 'layer4', 'layer5', 'layer6', 'layer7', 'layer8'];
-
+var center;
+//initialize the maps
 function initMap() {
-	var myLatLng = new google.maps.LatLng(33.760654,-84.355205);
+	var myLatLng = new google.maps.LatLng(33.758994,-84.355305);
 	var myOptions = {
 		zoom: 16,
 		center: myLatLng,
@@ -27,6 +28,17 @@ function initMap() {
 	for(var i = 1; i < layers.length; i++){
 		layers[i].setMap(null);
 	}
+	//keep map centered with window size change
+	function calculateCenter() {
+		center = map.getCenter();
+		console.log(center);
+	}
+	google.maps.event.addDomListener(map, 'idle', function() {
+		calculateCenter();
+		});
+	google.maps.event.addDomListener(window, 'resize', function() {
+		map.setCenter(center);
+	});
 }
 //show hide layers
 function toggleLayer(i) {
@@ -40,15 +52,23 @@ function toggleLayer(i) {
 
 	}
 }
+window.addEventListener('resize', menuSize);
 //open overlay nav
 function openNav(){
-	document.getElementById('myNav').style.width = "30%";
+	menuSize();
 	document.getElementById('myNav').style.opacity = "1.0";
 }
 // //close overlay nav
 function closeNav(){
 	document.getElementById('myNav').style.width = "0%";
 	document.getElementById('myNav').style.opacity = "0.0";
+}
+function menuSize(){
+	if($(window).width()<=1000){
+		document.getElementById('myNav').style.width = "50%";
+	}else{
+		document.getElementById('myNav').style.width = "30%";
+	}
 }
 
 
