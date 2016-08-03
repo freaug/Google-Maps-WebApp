@@ -9,6 +9,7 @@
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript" src="kml.js"></script>
   </head>
+  <!-- load map when the page has loaded -->
   <body onload="initMap()">
     <!-- overlay nav, default hidden -->
     <div id="myNav" class="overlay">
@@ -23,6 +24,8 @@
             <a onclick="toggleLayer(6)"><span id="layer6"  class="glyphicon glyphicon-unchecked"></span> Stages</a>
             <a onclick="toggleLayer(7)"><span id="layer7"  class="glyphicon glyphicon-unchecked"></span> Street Vendors</a>
             <a onclick="toggleLayer(8)"><span id="layer8"  class="glyphicon glyphicon-unchecked"></span> Tour of Homes</a>
+            <a onclick="toggleLayer(9)"><span id="layer9" class="glyphicon glyphicon-unchecked"></span> Select All</a>
+            <a onclick="toggleLayer(10)"><span id="layer10" class="glyphicon glyphicon-unchecked"></span> None</a>
         </div>
     </div>
     <!-- map -->
